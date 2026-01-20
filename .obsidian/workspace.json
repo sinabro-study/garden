@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/01 Temp.md",
+                "file": "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/01. Temp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 Temp"
+              "title": "01. Temp"
             }
           }
         ]
@@ -175,22 +175,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-git:Open Git source control": false
+      "bases:Create new base": false
     }
   },
   "active": "e7ceb5fedef67a9c",
   "lastOpenFiles": [
-    "2. System/Untitled.md",
+    "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/01. Temp.md",
     "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/01 Temp.md",
+    "Untitled",
+    "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/attachments/Screenshot 2026-01-20 at 6.44.39 AM.png",
+    "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/attachments",
+    "Images/Screenshot 2026-01-20 at 6.44.54 AM.png",
+    "Images",
+    "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식/Untitled",
+    "2. System/Untitled.md",
     "2. System/주니어 백엔드 개발자가 반드시 알아야 할 실무 지식",
     "9. Retrospective/tset.md",
     "2026-01-20.md",
