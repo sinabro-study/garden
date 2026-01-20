@@ -70,5 +70,31 @@
       ],
       "key": "R"
     }
-  ]
+  ],
+  "terminal:open-terminal.integrated.root": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "`"
+    }
+  ],
+  "terminal:close-terminal": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "W"
+    }
+  ],
+  "terminal:clear-terminal": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "K"
+    }
+  ],
+  "terminal:find-in-terminal": []
 }

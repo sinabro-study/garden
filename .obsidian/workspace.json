@@ -4,20 +4,75 @@
     "type": "split",
     "children": [
       {
-        "id": "fee80e40c1abb168",
-        "type": "tabs",
+        "id": "3511efc9355a9eeb",
+        "type": "split",
         "children": [
           {
-            "id": "c2f4df18a314fb9a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
+            "id": "c650810390b32e1c",
+            "type": "tabs",
+            "dimension": 69.46996466431095,
+            "children": [
+              {
+                "id": "d016d3ce68bc5cda",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              }
+            ]
+          },
+          {
+            "id": "8c0d0d46f507eebf",
+            "type": "tabs",
+            "dimension": 30.53003533568905,
+            "children": [
+              {
+                "id": "43207eeb9c0be40a",
+                "type": "leaf",
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/duho_lee/Develop/Personal/garden",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "icon": "terminal",
+                  "title": "Terminal: duho_lee@ip-192-168-40-194:~/Develop/Personal/garden"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -180,11 +235,13 @@
       "bases:Create new base": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "c2f4df18a314fb9a",
+  "active": "43207eeb9c0be40a",
   "lastOpenFiles": [
+    "1. Code/asdf.md",
     "asdfadsf.md",
     "9. Retrospective",
     "2. System",
