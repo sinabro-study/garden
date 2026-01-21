@@ -97,22 +97,13 @@
     }
   ],
   "terminal:find-in-terminal": [],
-  "app:delete-file": [
+  "daily-notes": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "Delete"
+      "key": "T"
     }
   ],
-  "file-explorer:new-folder": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "N"
-    }
-  ],
-  "file-explorer:new-file-in-new-pane": []
+  "workspace:new-tab": []
 }

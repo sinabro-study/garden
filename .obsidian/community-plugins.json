@@ -2,5 +2,7 @@
   "obsidian-excalidraw-plugin",
   "table-editor-obsidian",
   "periodic-notes",
-  "obsidian-tasks-plugin"
+  "obsidian-git",
+  "obsidian-tasks-plugin",
+  "dataview"
 ]
