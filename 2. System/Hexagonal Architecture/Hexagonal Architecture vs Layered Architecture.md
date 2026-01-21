@@ -75,3 +75,17 @@ data class SendMoneyCommand(
 - Incoming 전용 Port를 만들고 Query Service에 구현하는 것
 - Read Only Query는 Write가 가능한 Usecase와 코드 상에서 명확하게 구분
 	- CQS(Command-Query Seperation)와 CQRS(Command-Query Responsibility Segregation) 개념과 잘 맞는다.
+
+
+|       **구분**       |  ==**Layered Architecture**==   | ==**Hexagonal Architecture**== |
+| :----------------: | :-----------------------------: | :----------------------------: |
+|     **요청 흐름**      |  상위 계층 -> 하위 계층 (UI -> Infra)   | 외부 -> 내부 (Framework -> Domain) |
+|     **의존성 방향**     |           상위가 하위를 의존            |        내부는 외부에 의존하지 않음         |
+|     **설계 중심**      |           데이터(DB) 중심            |           객체/비즈니스 중심           |
+|     **기술 종속성**     | DB, Framewokr, 3rd Party 강하게 종속 |           기술로부터 독립적            |
+|     **변경 용이성**     |      낮음 (Infra 변경 시 영향 큼)       |         높음 (외부 교체 용이)          |
+|    **테스트 용이성**     |         어려움 (통합 테스트 위주)         |         쉬움 (단위 테스트 가능)         |
+|      **복잡도**       |               낮음                |               높음               |
+| **Learning Curve** |               낮음                |               높음               |
+|     **적합한 경우**     |       소규모/단순한 Application       |        중/대규모, 장기 운영 서비스        |
+|     **핵심 목적**      |              빠른 구현              |           비즈니스 로직 보호           |
