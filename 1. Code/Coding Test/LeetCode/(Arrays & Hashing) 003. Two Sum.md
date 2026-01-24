@@ -54,6 +54,9 @@ class Solution:
         return []
 ```
 
+
+## Result
+
 ![[Screenshot 2026-01-24 at 4.25.19 PM.png]]
 
 ![[Screenshot 2026-01-24 at 4.26.05 PM.png]]
