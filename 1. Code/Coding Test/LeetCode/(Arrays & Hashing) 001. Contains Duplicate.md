@@ -1,3 +1,4 @@
+
 ```cardlink
 url: https://leetcode.com/problems/contains-duplicate/description/
 title: "Contains Duplicate - LeetCode"
@@ -5,6 +6,7 @@ description: "Can you solve this real interview question? Contains Duplicate - G
 host: leetcode.com
 image: https://leetcode.com/static/images/LeetCode_Sharing.png
 ```
+
 
 ## Problems
 

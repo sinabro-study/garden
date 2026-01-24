@@ -1,3 +1,4 @@
+
 ```cardlink
 url: https://leetcode.com/problems/valid-anagram/description/?q=Valid+Anagram
 title: "Valid Anagram - LeetCode"
@@ -17,7 +18,7 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram[^1] o
 
 ## Contraints
 
-- `1 <= s.length, t.length <= 5 * 104`
+- 1 <= s.length, t.length <= 5 * $10^4$
 - `s` and `t` consist of lowercase English letters.
 
 ## Solution
@@ -36,6 +37,7 @@ class Solution:
 
        return source == target
 ```
+
 
 
 ## Result
