@@ -6,11 +6,9 @@ host: leetcode.com
 image: https://leetcode.com/static/images/LeetCode_Sharing.png
 ```
 
-
 ## Problems
 
 Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.
-
 
 ## Example
 
@@ -19,8 +17,8 @@ Given an integer array `nums`, return `true` if any value appears **at least
 **Explanation:**
 The element 1 occurs at the indices 0 and 3.
 
-
 ## Solution
+
 ```python
 from typing import List
 
@@ -34,8 +32,6 @@ if __name__ == "__main__":
   print(solution.containsDuplicate([1, 2, 3, 1]))
 ```
 
-
 ## Result
 ![[Screenshot 2026-01-24 at 11.21.29 AM.png]]
-
 

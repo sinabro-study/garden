@@ -1,0 +1,11 @@
+.footnote-link:hover::after {
+    content: " [클릭하여 주석 확인]"; /* 텍스트가 뜨는지 확인용 */
+    position: absolute;
+    background: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    z-index: 100;
+}
+
