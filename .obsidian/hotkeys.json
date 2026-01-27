@@ -123,5 +123,14 @@
     }
   ],
   "auto-card-link:auto-card-link-enhance-selected-url": [],
-  "auto-card-link:auto-card-link-paste-and-enhance": []
+  "auto-card-link:auto-card-link-paste-and-enhance": [],
+  "templater-obsidian:insert-templater": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ]
 }

@@ -57,7 +57,7 @@ class Solution:
 		- sorted 함수는 timesort 사용하므로: O($MlogM$)
 
 - Solution 2
-	- 시간 복잡도 O($NlogK$) 소요
+	- 시간 복잡도 O($N + NlogK$) 소요
 		- heap을 사용하여 시간 복잡도 감소
 		- 결과는 동일[^1]
 
