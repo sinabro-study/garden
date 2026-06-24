@@ -1,5 +1,13 @@
 {
   "enabledCssSnippets": [
-    "footnote-hover"
-  ]
+    "bullet-fix"
+  ],
+  "cssTheme": "AnuPpuccin",
+  "theme": "moonstone",
+  "baseFontSize": 15,
+  "accentColor": "",
+  "translucency": false,
+  "monospaceFontFamily": "Pretendard",
+  "textFontFamily": "Pretendard",
+  "interfaceFontFamily": "Pretendard"
 }
