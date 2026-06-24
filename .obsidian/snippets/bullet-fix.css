@@ -1,0 +1,9 @@
+.markdown-reading-view ul li,
+.markdown-source-view ul li {
+  padding-left: 0.3em !important;
+}
+
+.cm-line .list-bullet {
+  margin-right: 0.3em !important;
+}
+
