@@ -41,7 +41,7 @@ LIMIT 10
 
 ---
 
-# Engineering Career Roadmap
+## Engineering Career Roadmap
 
 |           | Stage 1 <br>Engineer | Stage 2<br>Senior Engineer | Stage 3<br>Staff / Tech Lead | Stage 4<br>Principal | Stage 5<br>CTO  |
 | --------- | -------------------- | -------------------------- | ---------------------------- | -------------------- | --------------- |
