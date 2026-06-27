@@ -1,43 +1,12 @@
 ## Identity
 나는 백엔드 개발을 기반으로 시스템 설계와 기술 의사결정을 수행하며 조직의 생산성을 높이는 엔지니어가 된다.
-  
+
 - Current Role: **Project Lead Engineer** **(회사)**
 - Next Role: **Staff Engineer / Tech Lead**
 
-## Current Focus
-### Technical
-```dataview
-TABLE file.ctime as 작성일자
-FROM "03_Resources/Technical"  
-WHERE file.ctime >= date(2026-01-01)
-SORT file.ctime DESC
-LIMIT 10
-```
-
-### Leadership
-```dataview
-TABLE file.ctime as 작성일자
-FROM "03_Resources/Leadership"
-WHERE file.ctime >= date(2026-01-01)
-SORT file.ctime DESC
-LIMIT 10
-```
-
-
-### Organization
-```dataview
-TABLE file.ctime as 작성일자
-FROM "03_Resources/Organization"
-WHERE file.ctime >= date(2026-01-01)
-SORT file.ctime DESC
-LIMIT 10
-```
-
-## Long-term Direction
-- 기술 전략 수립
-- 시스템 아키텍처 결정
-- 조직 기술 방향 설정
-- 팀 생산성 극대화
+## Areas
+- [[Technical]]
+- [[Lead]]
 
 ---
 
