@@ -113,10 +113,9 @@ begin
 end;
 ```
 
+### I (Isolation, 격리성)
+- 동시에 실행되는 트랜잭션들이 서로 간섭 금지
+[[(Transaction) Isolation]]
 
-### Isolation
-동시에 여러 Transaction 이 수행될 때 충돌을 어디까지 허용할 것인가?
-
-|     |     |
-| --- | --- |
-|     |     |
+### D (Durability, 지속성)
+- Commit 된 결과는 영구적으로 보존
