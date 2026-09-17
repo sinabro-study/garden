@@ -12,14 +12,14 @@ fi
 
 # 2. 애플리케이션 및 도구 설치
 brew install --cask iterm2 intellij-idea docker slack
-brew install git openjdk@21 hey zsh-syntax-highlighting
+brew install git openjdk@25 hey zsh-syntax-highlighting
 
 # 3. Git 설정
 git config --global user.name "Duho Lee"
 git config --global user.email "duholee@company.com"
 
-# 4. Java 21 심볼릭 링크 (시스템 인식용)
-sudo ln -sfn $(brew --prefix)/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+# 4. Java 25 심볼릭 링크 (시스템 인식용)
+sudo ln -sfn $(brew --prefix)/opt/openjdk@25/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-25.jdk
 
 # 5. Oh My Zsh 설치 (비대화형 모드 --unattended)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -50,9 +50,6 @@ add_alias() {
 
 alias com="cd ~/Develop/Company"
 alias per="cd ~/Develop/Personal"
-alias garden="cd ~/Develop/Personal/garden"
-alias note="cd ~/Develop/Personal/manure"
-
 
 
 echo "설치가 완료되었습니다. 터미널을 재시작해주세요!"
@@ -68,11 +65,11 @@ echo "⚠️ 개발 환경 삭제를 시작합니다..."
 # 1. Homebrew로 설치한 패키지 및 Cask 삭제
 echo "--- Homebrew 패키지 삭제 중 ---"
 brew uninstall --cask iterm2 intellij-idea docker slack
-brew uninstall git openjdk@21 hey zsh-syntax-highlighting
+brew uninstall git openjdk@25 hey zsh-syntax-highlighting
 
 # 2. Java 심볼릭 링크 제거
 echo "--- Java 설정 제거 중 ---"
-sudo rm -f /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+sudo rm -f /Library/Java/JavaVirtualMachines/openjdk-25.jdk
 
 # 3. AWS CLI 삭제
 echo "--- AWS CLI 제거 중 ---"
