@@ -13,6 +13,10 @@ fi
 # 2. 애플리케이션 및 도구 설치
 brew install --cask iterm2 intellij-idea docker slack
 brew install git openjdk@25 hey zsh-syntax-highlighting
+curl -o- https://fnm.vercel.app/install | bash
+fnm install 26
+npm install -g corepack
+corepack enable pnpm
 
 # 3. Git 설정
 git config --global user.name "Duho Lee"
@@ -51,6 +55,18 @@ add_alias() {
 alias com="cd ~/Develop/Company"
 alias per="cd ~/Develop/Personal"
 
+# 10. AI 설치
+## Claude Code
+curl -fsSL https://claude.ai/install.sh | bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+
+## Codex
+npm i -g @openai/codex
+
+# 11. Version 확인
+java --version
+node -v
+pnpm -v
 
 echo "설치가 완료되었습니다. 터미널을 재시작해주세요!"
 ```
