@@ -1,7 +1,7 @@
 # 7주차 네 번째 수업: Aurora Writer·Reader·공유 스토리지
 
 작성: 2026-11-05
-예상 35~45분 · 3문항·하위 6문항 답변 대기 · 실제 AWS 변경 없음
+예상 35~45분 · 최초·보완 평가 기록 · Reader 지연 이유 설명 보충 · 실제 AWS 변경 없음
 
 ## 1. Aurora와 이번 수업의 범위
 
@@ -146,3 +146,87 @@ AZ-A 장애 때 스토리지가 남아 있으니 다른 AZ의 실행 중인 DB �
 - [스토리지·컴퓨팅 고가용성 구분](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html)
 - [AWS 공식 아키텍처 아이콘](https://aws.amazon.com/architecture/icons/)
 - [이전 수업](41_RDS_백업_스냅샷_시점_복원.md)
+
+## 최초 답변 평가 — 2026-11-06
+
+문항별 정답 2·부분 정답 1이며 하위 질문별 정답 5·부분 정답 1이다.
+1-1은 공유 클러스터 볼륨·인스턴스와 저장 계층 분리·Writer 읽기/쓰기와 Reader 읽기 역할이 정확하다.
+1-2는 Reader 지연 가능성과 최신 읽기를 Writer로 보낸다는 결론이 맞다.
+다만 다른 AZ의 DB 인스턴스에 데이터를 비동기로 중복 저장해야 해서라는 이유는 Aurora 공유 저장 계층과 Reader 상태 적용을 혼동한 부분이다.
+여러 AZ의 공유 클러스터 스토리지 복제는 동기식 데이터 보호 계층이고 Reader의 비동기 변경 적용·인메모리 상태 반영은 별도다.
+Reader마다 별도 전체 데이터 볼륨을 비동기 복사해서 지연된다고 이해하지 않는다.
+Reader의 AZ가 Writer와 다르다는 사실이 지연 가능성의 유일한 조건도 아니다.
+같은 AZ에 둬도 공유 스토리지 사용만으로 Reader 지연 0을 보장하지 않는다.
+2-1은 쓰기·보고서 조회 엔드포인트 선택과 자동 쓰기 라우팅이 없다는 설명이 정확하다.
+엄밀히 Reader endpoint가 SQL 방화벽인 것이 아니라 정상 Reader에 맺어진 세션에서 DB가 쓰기를 허용하지 않는 것이다. 이 표현은 설명 보충만 하고 별도 오답으로 세지 않는다.
+2-2는 같은 연결의 쿼리별 자동 분산이 없다는 결론이 정확하다. 앱 연결 방식에 따른다는 답에 분산 단위는 새 연결이라고 보충한다.
+3-1은 새 Writer 대상으로 전환·엔드포인트 이름을 앱에서 교체할 필요 없음·기존 연결 재수립이 정확하다.
+분배라는 표현은 현재 Writer를 가리킨다는 의미로 이해하며 여러 Writer에 쓰기를 분산한다는 오개념으로 처리하지 않는다.
+3-2는 DB 인스턴스 AZ 분산과 저장 계층 중복을 정확히 구분하고 서로 다른 AZ의 Writer·Reader를 제시했다.
+
+### Reader 지연 설명 보충
+
+| 계층 | 이번 Aurora의 의미 |
+|---|---|
+| 공유 클러스터 스토리지 | 한 리전 여러 AZ에 데이터를 동기 복제 |
+| Reader의 처리 상태 | 변경 적용·메모리 상태 반영 등이 Writer를 따라가는 과정에 지연 가능 |
+| Reader 추가 | 같은 공유 볼륨을 쓰는 처리 인스턴스 추가 · 인스턴스마다 전체 볼륨 사본 생성 아님 |
+
+공유 저장소에 데이터가 저장되어 있다는 것과 Reader가 그 최신 변경을 자신의 조회 처리 상태에 반영했다는 것은 구분한다.
+세부 내부 로그·캐시 구현의 암기는 요구하지 않는다.
+
+### 보완 확인 — 4-1 결론 확인·이유 설명 요청
+
+4-1. Writer와 Reader를 같은 AZ에 배치했다.
+Reader는 Writer와 같은 클러스터 볼륨을 사용한다.
+이 두 사실만으로 Reader 지연이 항상 0이라고 보장할 수 있는가?
+스토리지 복제와 Reader의 변경 적용을 구분해 설명하자.
+AZ 배치의 가용성 문제는 이미 정답 확인했으므로 이 문제에서는 다시 묻지 않는다.
+
+- [Aurora 스토리지와 인스턴스 복제 계층](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html)
+- [Aurora PostgreSQL 공유 볼륨·Reader 상태 반영](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Replication.html)
+
+## 보완 답변과 지연 이유 설명 — 2026-11-06
+
+4-1에서 사용자는 지연 0을 보장할 수 없다는 결론은 정확히 답했다.
+이유는 모르겠으니 설명해 달라고 요청했다.
+보완은 결론 정답·이유 설명 보충으로 기록하며 사용자가 이유까지 독립적으로 설명했다고 추정하지 않는다.
+최초 정답 2·부분 정답 1은 유지한다.
+추가 암기 질문 없이 아래 설명을 제공하고 이번 수업을 마친다.
+
+캐시(Cache)는 반복해서 사용할 데이터를 빠르게 읽기 위해 메모리에 보관하는 공간이다.
+Writer와 Reader는 같은 클러스터 볼륨을 쓰지만 각자 별도의 메모리와 데이터 페이지 캐시 및 처리 상태를 갖는다.
+Writer가 최신 변경을 확정해도 Reader가 자신의 캐시·변경 적용 상태를 그 시점까지 따라가는 과정은 필요하다.
+Aurora PostgreSQL 공식 문서는 ReplicaLag를 Writer에 비해 Reader의 페이지 캐시가 뒤처지는 정도로 설명한다.
+따라서 이 문제의 지연은 각 Reader를 위한 별도 전체 데이터 볼륨 복사를 기다리는 것과 다르다.
+
+예를 들어 Writer는 주문 900을 확정한 상태다.
+공유 저장 계층에 그 변경이 기록되어도 Reader의 조회 처리 상태가 아직 그 변경을 따라가는 중일 수 있다.
+이때 Reader에서 아직 주문이 보이지 않을 수 있고 이후 적용을 따라가면 보인다.
+단순히 임의의 오래된 캐시를 무조건 반환한다는 뜻이 아니라 DB가 자신의 적용 진행 상태와 일관성 규칙에 따라 조회를 처리한다는 뜻이다.
+같은 AZ는 물리적 위치 조건일 뿐 별도 DB 인스턴스의 메모리·처리 상태를 하나로 만드는 조건이 아니다.
+그러므로 같은 AZ·공유 볼륨만으로 Reader 지연 0을 보장할 수 없다.
+쓰기 직후 최신 결과 확인은 Writer에서 읽는 방향을 사용한다.
+
+- [공유 볼륨과 ReplicaLag의 페이지 캐시 의미](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Replication.html)
+
+다음 요청 시 DynamoDB 키 기반 데이터 모델과 접근 패턴 기초를 공식 AWS 아이콘·예제로 먼저 준비한다.
+다음 자료는 아직 작성하지 않았다. 완료 주차는 6/32다.
+
+## 추가 질문: Replica lag와 Phantom Read — 2026-11-06
+
+사용자가 Reader 지연은 Phantom Read와 다른 현상인지 질문했다. 구분이 맞다.
+Replica lag는 Writer와 Reader 사이의 변경 반영 지연 문제다.
+Phantom Read는 같은 트랜잭션에서 같은 검색 조건으로 재조회했을 때 다른 트랜잭션의 COMMIT으로 조건에 맞는 행 집합이 달라지는 현상이다.
+복제본이 없어도 단일 Writer에서 동시 트랜잭션 때문에 발생할 수 있다.
+
+예를 들어 T1이 amount>=10000 주문을 조회해 3행을 받았다.
+T2가 같은 조건에 맞는 새 주문을 INSERT하고 COMMIT했다.
+T1이 같은 트랜잭션 안에서 같은 조건을 재조회해 4행을 보면 Phantom Read 예다.
+발생 여부는 격리 수준과 DB 구현에 따라 다르다.
+PostgreSQL에서는 Read Committed에서 가능하지만 Repeatable Read는 Phantom Read도 방지한다.
+모든 DB의 Repeatable Read가 똑같이 동작한다고 일반화하지 않는다.
+Writer에서 읽으면 Reader 지연은 피할 수 있지만 낮은 격리 수준의 동시 트랜잭션 현상까지 자동 방지되는 것은 아니다.
+이 내용은 사용자 질문에 대한 설명이며 새 평가 문제나 진도 점수는 추가하지 않는다.
+
+- [PostgreSQL Phantom Read와 격리 수준](https://www.postgresql.org/docs/current/transaction-iso.html)
