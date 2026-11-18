@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="690" viewBox="0 0 1060 690" role="img" aria-labelledby="title desc">
+  <title id="title">JPA 구성 요소의 생성 및 포함 관계</title>
+  <desc id="desc">EntityManagerFactory가 실제 EntityManager를 생성한다. Spring 주입 프록시는 현재 트랜잭션의 EntityManager로 호출을 전달한다. EntityManager는 영속성 컨텍스트를 관리하고 그 안에 1차 캐시와 관리 Entity가 있다.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eef5ff"/></linearGradient>
+    <linearGradient id="em" x2="1" y2="1"><stop stop-color="#edf3ff"/><stop offset="1" stop-color="#f8fbff"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#244875" flood-opacity=".12"/></filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M1 1L9 5.5L1 10" fill="none" stroke="#53739c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; }
+      .title { font-size: 29px; font-weight: 800; fill: #122641; }
+      .sub { font-size: 15px; fill: #59708c; }
+      .label { font-size: 13px; font-weight: 750; letter-spacing: .5px; }
+      .name { font-size: 23px; font-weight: 800; fill: #172d4d; }
+      .body { font-size: 15px; fill: #56708e; }
+      .tiny { font-size: 13px; fill: #59708c; }
+    </style>
+  </defs>
+  <rect width="1060" height="690" rx="26" fill="url(#bg)"/>
+  <text x="56" y="65" class="title">JPA의 생성·관리·포함 관계</text>
+  <text x="56" y="96" class="sub">OSIV=false · 기본 transaction-scoped 영속성 컨텍스트 기준</text>
+
+  <rect x="56" y="136" width="435" height="128" rx="20" fill="#fff" stroke="#c6d9ef" filter="url(#shadow)"/>
+  <rect x="76" y="154" width="144" height="28" rx="14" fill="#e0efff"/>
+  <text x="148" y="173" text-anchor="middle" class="label" fill="#2164a3">애플리케이션 공유</text>
+  <text x="76" y="216" class="name">EntityManagerFactory</text>
+  <text x="76" y="244" class="body">실제 EntityManager를 만드는 팩토리</text>
+
+  <rect x="584" y="136" width="420" height="128" rx="20" fill="#fff" stroke="#d8d1f3" filter="url(#shadow)"/>
+  <rect x="604" y="154" width="140" height="28" rx="14" fill="#eee9ff"/>
+  <text x="674" y="173" text-anchor="middle" class="label" fill="#6d55aa">서비스에 주입</text>
+  <text x="604" y="216" class="name">EntityManager 프록시</text>
+  <text x="604" y="244" class="body">현재 트랜잭션의 실제 객체로 호출 전달</text>
+
+  <path d="M274 264V309H354V336" fill="none" stroke="#53739c" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="220" y="278" width="92" height="24" rx="12" fill="#fff"/>
+  <text x="266" y="295" text-anchor="middle" class="tiny">생성</text>
+  <path d="M791 264V308H698V336" fill="none" stroke="#846db5" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="720" y="278" width="98" height="24" rx="12" fill="#fff"/>
+  <text x="769" y="295" text-anchor="middle" class="tiny">호출 전달</text>
+
+  <rect x="139" y="336" width="782" height="294" rx="24" fill="url(#em)" stroke="#88ace1" stroke-width="2.4" filter="url(#shadow)"/>
+  <rect x="164" y="359" width="116" height="28" rx="14" fill="#d9e7ff"/>
+  <text x="222" y="378" text-anchor="middle" class="label" fill="#315caa">트랜잭션 범위</text>
+  <text x="164" y="422" class="name">실제 EntityManager</text>
+  <text x="164" y="449" class="body">영속성 컨텍스트를 관리</text>
+
+  <rect x="445" y="366" width="444" height="231" rx="19" fill="#fff" stroke="#7ccbbd" stroke-width="2"/>
+  <rect x="466" y="384" width="127" height="27" rx="13.5" fill="#dcf6f0"/>
+  <text x="529.5" y="403" text-anchor="middle" class="label" fill="#168572">상태 관리 공간</text>
+  <text x="466" y="447" class="name">영속성 컨텍스트</text>
+  <text x="466" y="472" class="body">Entity 생명주기 · 변경 감지</text>
+
+  <rect x="466" y="497" width="398" height="76" rx="14" fill="#eaf9f3" stroke="#97d9c0"/>
+  <circle cx="500" cy="535" r="17" fill="#34a889"/>
+  <path d="M492 534l6 6 11-13" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="532" y="531" class="label" fill="#157960">1차 캐시</text>
+  <text x="532" y="553" class="body">(Entity 타입, ID) → 관리 Entity</text>
+
+  <text x="530" y="665" text-anchor="middle" class="tiny">새 물리 트랜잭션에서는 보통 별도의 실제 EntityManager와 영속성 컨텍스트를 사용합니다.</text>
+</svg>
