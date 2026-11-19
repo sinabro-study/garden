@@ -31,6 +31,6 @@ Level 5는 증빙 출처 또는 증빙 부재를 명확히 말해야 한다.
 
 ## 현재 위치
 
-2단원 Spring 트랜잭션 Level 1~5 통과.  
-다음 단원은 [MySQL MVCC](./03_단원_03_MVCC.md)다.  
+4단원 락과 데드락까지 Level 1~5 통과.  
+다음 단원은 [JDBC Batch와 flush·clear](./05_단원_05_Batch.md)다.  
 1단원 JPA의 Level 4 대안 비교는 복습 항목으로 남아 있다.
