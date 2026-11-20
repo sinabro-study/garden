@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="423" viewBox="0 0 1120 423" role="img" aria-labelledby="title desc">
+<title id="title">B-Tree 점 조회</title><desc id="desc">키 30은 내부 페이지에 실제 검색 항목으로 있어 리프까지 갈 필요가 없다.</desc>
+<defs>
+<marker id="gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#798ca6"/></marker>
+<marker id="blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2856b5"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#06766a"/></marker>
+<marker id="amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#98510b"/></marker>
+<linearGradient id="header" x2="100%" y2="100%"><stop stop-color="#142444"/><stop offset="1" stop-color="#243a62"/></linearGradient></defs>
+<rect x="0" y="0" width="1120" height="423" rx="24" fill="#f2f6fb" stroke="none"/>
+<rect x="0" y="0" width="1120" height="423" rx="24" fill="#101e36" stroke="none"/>
+<text x="48" y="63" fill="#ffffff" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="37" font-weight="750" text-anchor="start">B-Tree</text>
+<text x="49" y="99" fill="#c1d0ec" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="19" font-weight="600" text-anchor="start">키 30의 점 조회 · 내부 페이지에서 검색 종료</text>
+<path d="M48 122 H1072" fill="none" stroke="#354a69" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560 194 L325 234" fill="none" stroke="#f0bd7d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#amber)"/>
+<path d="M560 194 L795 234" fill="none" stroke="#68829f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M325 280 L190 320" fill="none" stroke="#68829f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M325 280 L460 320" fill="none" stroke="#68829f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M795 280 L660 320" fill="none" stroke="#68829f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M795 280 L930 320" fill="none" stroke="#68829f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="533.0" y="148" width="54" height="46" rx="8" fill="#253b64" stroke="#6e8ebc"/>
+<text x="560.0" y="178.0" fill="#ffffff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">40</text>
+<rect x="298.0" y="234" width="54" height="46" rx="8" fill="#253b64" stroke="#f0bd7d"/>
+<rect x="301.0" y="237" width="48" height="40" rx="6" fill="#f5c584" stroke="none"/>
+<text x="325.0" y="264.0" fill="#454020" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">30</text>
+<rect x="768.0" y="234" width="54" height="46" rx="8" fill="#253b64" stroke="#6e8ebc"/>
+<text x="795.0" y="264.0" fill="#ffffff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">60</text>
+<rect x="136.0" y="320" width="108" height="46" rx="8" fill="#22344d" stroke="#6e8ebc"/>
+<text x="163.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">10</text>
+<path d="M190.0 326 V360" fill="none" stroke="#6e8ebc" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="217.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">20</text>
+<rect x="433.0" y="320" width="54" height="46" rx="8" fill="#22344d" stroke="#6e8ebc"/>
+<text x="460.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">35</text>
+<rect x="606.0" y="320" width="108" height="46" rx="8" fill="#22344d" stroke="#6e8ebc"/>
+<text x="633.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">45</text>
+<path d="M660.0 326 V360" fill="none" stroke="#6e8ebc" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="687.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">50</text>
+<rect x="876.0" y="320" width="108" height="46" rx="8" fill="#22344d" stroke="#6e8ebc"/>
+<text x="903.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">70</text>
+<path d="M930.0 326 V360" fill="none" stroke="#6e8ebc" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="957.0" y="350.0" fill="#e9f1ff" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">80</text>
+<text x="58" y="175" fill="#b0c6e7" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="650" text-anchor="start">루트</text>
+<text x="58" y="261" fill="#b0c6e7" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="650" text-anchor="start">내부</text>
+<text x="58" y="348" fill="#b0c6e7" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="650" text-anchor="start">리프</text>
+<text x="370" y="260" fill="#ffd498" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="750" text-anchor="start">키 30에 연결된 값 발견</text>
+<text x="560" y="402" fill="#b0c6e7" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="500" text-anchor="middle">칸 하나가 정렬된 키와 그 값 또는 레코드 참조를 나타낸다.</text>
+</svg>

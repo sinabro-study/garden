@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="646" viewBox="0 0 1120 646" role="img" aria-labelledby="title desc">
+<title id="title">InnoDB 클러스터드 인덱스와 보조 인덱스</title><desc id="desc">보조 인덱스의 창고 7 리프에서 PK 101과 205를 찾는다. 수량이 필요하면 두 PK로 클러스터드 인덱스를 재탐색해 수량 12와 5를 얻는다.</desc>
+<defs>
+<marker id="gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#798ca6"/></marker>
+<marker id="blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2856b5"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#06766a"/></marker>
+<marker id="amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#98510b"/></marker>
+<linearGradient id="header" x2="100%" y2="100%"><stop stop-color="#142444"/><stop offset="1" stop-color="#243a62"/></linearGradient></defs>
+<rect x="0" y="0" width="1120" height="646" rx="24" fill="#f2f6fb" stroke="none"/>
+<rect x="0" y="0" width="1120" height="134" rx="24" fill="url(#header)" stroke="none"/>
+<rect x="0" y="110" width="1120" height="24" rx="0" fill="#243a62" stroke="none"/>
+<text x="43" y="37" fill="#b9d0f5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="start">MYSQL INNODB</text>
+<text x="43" y="79" fill="#ffffff" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="34" font-weight="750" text-anchor="start">같은 테이블을 읽는 두 인덱스</text>
+<text x="43" y="110" fill="#d3e2fb" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="500" text-anchor="start">보조 인덱스는 PK를 찾고, 클러스터드 인덱스는 행을 찾는다.</text>
+<rect x="40" y="154" width="502" height="394" rx="19" fill="#ffffff" stroke="#d7e2ee"/>
+<text x="64" y="192" fill="#2856b5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="25" font-weight="750" text-anchor="start">보조 인덱스</text>
+<text x="64" y="218" fill="#4c617c" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="600" text-anchor="start">warehouse_id 순서</text>
+<rect x="578" y="154" width="502" height="394" rx="19" fill="#ffffff" stroke="#d7e2ee"/>
+<text x="602" y="192" fill="#06766a" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="25" font-weight="750" text-anchor="start">클러스터드 인덱스</text>
+<text x="602" y="218" fill="#4c617c" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="600" text-anchor="start">PRIMARY KEY (id) 순서</text>
+<path d="M175 469 V514 H558 V267 H692" fill="none" stroke="#2856b5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#blue)" stroke-dasharray="7 5"/>
+<text x="274" y="506" fill="#2856b5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="750" text-anchor="start">PK 101 · 205로 다시 찾기</text>
+<path d="M291 293 V311 H175 V341" fill="none" stroke="#2856b5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M291 311 H408 V341" fill="none" stroke="#2856b5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="154" y="240" width="274" height="53" rx="11" fill="#eaf1ff" stroke="#2856b5"/>
+<text x="291.0" y="272.26" fill="#2856b5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">루트 · 키 범위로 안내</text>
+<path d="M829 293 V311 H713 V341" fill="none" stroke="#06766a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M829 311 H946 V341" fill="none" stroke="#06766a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="692" y="240" width="274" height="53" rx="11" fill="#e4f5ef" stroke="#06766a"/>
+<text x="829.0" y="272.26" fill="#06766a" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">루트 · 키 범위로 안내</text>
+<rect x="64" y="341" width="222" height="128" rx="13" fill="#eaf1ff" stroke="#2856b5"/>
+<text x="77" y="371" fill="#2856b5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="750" text-anchor="start">리프 · 창고 7</text>
+<path d="M77 383 H273" fill="none" stroke="#d7e2ee" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="77" y="409" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="15" font-weight="600" text-anchor="start">warehouse 7  →  PK 101</text>
+<text x="77" y="436" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="15" font-weight="600" text-anchor="start">warehouse 7  →  PK 205</text>
+<rect x="297" y="341" width="222" height="128" rx="13" fill="#f7f9fd" stroke="#d7e2ee"/>
+<text x="310" y="371" fill="#2856b5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="750" text-anchor="start">리프 · 창고 8</text>
+<path d="M310 383 H506" fill="none" stroke="#d7e2ee" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="310" y="409" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="15" font-weight="600" text-anchor="start">warehouse 8  →  PK 307</text>
+<rect x="602" y="341" width="222" height="128" rx="13" fill="#e4f5ef" stroke="#06766a"/>
+<text x="615" y="371" fill="#06766a" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="750" text-anchor="start">리프 · PK 101·205</text>
+<path d="M615 383 H811" fill="none" stroke="#d7e2ee" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="615" y="409" fill="#182640" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="start">101 · 창고 7 · 수량 12</text>
+<text x="615" y="436" fill="#182640" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="start">205 · 창고 7 · 수량 5</text>
+<rect x="835" y="341" width="222" height="128" rx="13" fill="#f7f9fd" stroke="#d7e2ee"/>
+<text x="848" y="371" fill="#06766a" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="750" text-anchor="start">리프 · PK 307</text>
+<path d="M848 383 H1044" fill="none" stroke="#d7e2ee" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="848" y="409" fill="#182640" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="start">307 · 창고 8 · 수량 20</text>
+<rect x="40" y="570" width="1040" height="54" rx="12" fill="#e7edf6" stroke="none"/>
+<text x="60" y="604" fill="#2856b5" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="700" text-anchor="start">창고 7에서 id만 조회 → PK 101 · 205</text>
+<text x="563" y="604" fill="#06766a" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="700" text-anchor="start">수량까지 조회 → PK로 행을 다시 찾아 12 · 5</text>
+</svg>

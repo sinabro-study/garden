@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="548" viewBox="0 0 1120 548" role="img" aria-labelledby="title desc">
+<title id="title">B*Tree 분할 전후</title><desc id="desc">두 이웃 노드가 가득 찬 예시에서 32를 삽입한다. 부모의 키도 함께 재배치한 뒤 30과 50이 새 구분 키가 되고 세 리프에는 키 4개씩 남는다.</desc>
+<defs>
+<marker id="gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#798ca6"/></marker>
+<marker id="blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2856b5"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#06766a"/></marker>
+<marker id="amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#98510b"/></marker>
+<linearGradient id="header" x2="100%" y2="100%"><stop stop-color="#142444"/><stop offset="1" stop-color="#243a62"/></linearGradient></defs>
+<rect x="0" y="0" width="1120" height="548" rx="24" fill="#f2f6fb" stroke="none"/>
+<text x="48" y="62" fill="#98510b" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="35" font-weight="750" text-anchor="start">B*Tree</text>
+<text x="49" y="96" fill="#4c617c" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="18" font-weight="550" text-anchor="start">이웃도 가득 찬 경우 · 키 32 삽입으로 두 노드를 세 노드로 분할</text>
+<path d="M48 120 H1072" fill="none" stroke="#d7e2ee" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="53" y="163" fill="#98510b" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="18" font-weight="750" text-anchor="start">분할 전</text>
+<path d="M560 204 L330 230" fill="none" stroke="#a08a70" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560 204 L790 230" fill="none" stroke="#a08a70" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="533.0" y="158" width="54" height="46" rx="8" fill="#fff0d9" stroke="#d4a361"/>
+<rect x="536.0" y="161" width="48" height="40" rx="6" fill="#ffdfac" stroke="none"/>
+<text x="560.0" y="188.0" fill="#98510b" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">40</text>
+<rect x="177.0" y="230" width="306" height="46" rx="8" fill="#ffffff" stroke="#cdb69e"/>
+<text x="202.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">10</text>
+<path d="M228.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="253.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">15</text>
+<path d="M279.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="304.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">20</text>
+<path d="M330.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="355.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">25</text>
+<path d="M381.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="406.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">30</text>
+<path d="M432.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="457.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">35</text>
+<rect x="637.0" y="230" width="306" height="46" rx="8" fill="#ffffff" stroke="#cdb69e"/>
+<text x="662.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">45</text>
+<path d="M688.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="713.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">50</text>
+<path d="M739.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="764.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">55</text>
+<path d="M790.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="815.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">60</text>
+<path d="M841.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="866.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">65</text>
+<path d="M892.0 236 V270" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="917.5" y="260.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">70</text>
+<rect x="380" y="304" width="360" height="42" rx="9" fill="#fff0d9" stroke="none"/>
+<text x="560" y="331" fill="#98510b" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="17" font-weight="750" text-anchor="middle">새 키 32와 부모 키를 함께 재배치</text>
+<text x="53" y="394" fill="#98510b" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="18" font-weight="750" text-anchor="start">분할 후</text>
+<path d="M560 430 L255 461" fill="none" stroke="#a08a70" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560 430 L560 461" fill="none" stroke="#a08a70" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560 430 L865 461" fill="none" stroke="#a08a70" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="506.0" y="384" width="108" height="46" rx="8" fill="#fff0d9" stroke="#d4a361"/>
+<rect x="509.0" y="387" width="48" height="40" rx="6" fill="#ffdfac" stroke="none"/>
+<text x="533.0" y="414.0" fill="#98510b" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">30</text>
+<path d="M560.0 390 V424" fill="none" stroke="#d4a361" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="563.0" y="387" width="48" height="40" rx="6" fill="#ffdfac" stroke="none"/>
+<text x="587.0" y="414.0" fill="#98510b" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">50</text>
+<rect x="147.0" y="461" width="216" height="46" rx="8" fill="#ffffff" stroke="#cdb69e"/>
+<text x="174.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">10</text>
+<path d="M201.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="228.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">15</text>
+<path d="M255.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="282.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">20</text>
+<path d="M309.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="336.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">25</text>
+<rect x="452.0" y="461" width="216" height="46" rx="8" fill="#ffffff" stroke="#cdb69e"/>
+<rect x="455.0" y="464" width="48" height="40" rx="6" fill="#ffdfac" stroke="none"/>
+<text x="479.0" y="491.0" fill="#98510b" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">32</text>
+<path d="M506.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="533.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">35</text>
+<path d="M560.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="587.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">40</text>
+<path d="M614.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="641.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">45</text>
+<rect x="757.0" y="461" width="216" height="46" rx="8" fill="#ffffff" stroke="#cdb69e"/>
+<text x="784.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">55</text>
+<path d="M811.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="838.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">60</text>
+<path d="M865.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="892.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">65</text>
+<path d="M919.0 467 V501" fill="none" stroke="#cdb69e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="946.0" y="491.0" fill="#182640" font-family="&#x27;SF Mono&#x27;, Menlo, monospace" font-size="20" font-weight="750" text-anchor="middle">70</text>
+<text x="560" y="529" fill="#4c617c" font-family="Pretendard, &#x27;Apple SD Gothic Neo&#x27;, &#x27;Noto Sans KR&#x27;, -apple-system, sans-serif" font-size="16" font-weight="550" text-anchor="middle">부모 키도 바뀌고, 세 리프는 각 4칸을 사용한다.</text>
+</svg>
