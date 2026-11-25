@@ -9,5 +9,6 @@
   "translucency": false,
   "monospaceFontFamily": "Pretendard",
   "textFontFamily": "Pretendard",
-  "interfaceFontFamily": "Pretendard"
+  "interfaceFontFamily": "Pretendard",
+  "showRibbon": true
 }
