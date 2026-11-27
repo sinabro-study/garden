@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title">
+  <title id="title">Cross-account access from Dev to Prod with AWS STS and Amazon S3</title>
+  <defs>
+    <style>
+      text { font-family: Helvetica, sans-serif; fill: #14253d; }
+      .heading { font-size: 26px; font-weight: 700; } .label { font-size: 19px; font-weight: 700; }
+      .detail { font-size: 16px; } .small { font-size: 14px; }
+      .box { fill: white; stroke: #b1c0d0; } .arrow { stroke: #344966; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+  <rect width="1100" height="430" rx="18" fill="#f3f6fa"/>
+  <text x="30" y="42" class="heading">Cross-account role access</text>
+  <rect x="30" y="70" width="315" height="325" rx="14" fill="#fff8ed" stroke="#ca913c"/>
+  <rect x="755" y="70" width="315" height="325" rx="14" fill="#eef6fb" stroke="#75a2c9"/>
+  <text x="51" y="106" class="label">Dev account</text>
+  <text x="776" y="106" class="label">Prod account</text>
+  <rect x="51" y="132" width="273" height="97" rx="10" class="box"/>
+  <svg x="63" y="151" width="36" height="36" viewBox="0 0 48 48">
+    <title>Icon-Resource/Compute/Res_Amazon-EC2_Instance_48</title>
+    <g id="Icon-Resource/Compute/Res_Amazon-EC2_Instance_48" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9,39 L39,39 L39,9 L9,9 L9,39 Z M46,13 L46,11 L41,11 L41,8 C41,7.448 40.552,7 40,7 L37,7 L37,2 L35,2 L35,7 L31,7 L31,2 L29,2 L29,7 L25,7 L25,2 L23,2 L23,7 L19,7 L19,2 L17,2 L17,7 L13,7 L13,2 L11,2 L11,7 L8,7 C7.447,7 7,7.448 7,8 L7,11 L2,11 L2,13 L7,13 L7,17 L2,17 L2,19 L7,19 L7,23 L2,23 L2,25 L7,25 L7,29 L2,29 L2,31 L7,31 L7,35 L2,35 L2,37 L7,37 L7,40 C7,40.553 7.447,41 8,41 L11,41 L11,46 L13,46 L13,41 L17,41 L17,46 L19,46 L19,41 L23,41 L23,46 L25,46 L25,41 L29,41 L29,46 L31,46 L31,41 L35,41 L35,46 L37,46 L37,41 L40,41 C40.552,41 41,40.553 41,40 L41,37 L46,37 L46,35 L41,35 L41,31 L46,31 L46,29 L41,29 L41,25 L46,25 L46,23 L41,23 L41,19 L46,19 L46,17 L41,17 L41,13 L46,13 Z" id="Amazon-EC2-Instance_Resource-Icon_light-bg" fill="#ED7100"></path>
+    </g>
+</svg>
+  <text x="108" y="166" class="label">Report app</text>
+  <text x="108" y="195" class="detail">DevAppRole</text>
+  <rect x="455" y="144" width="185" height="64" rx="10" class="box"/>
+  <text x="547" y="183" class="label" text-anchor="middle">AWS STS</text>
+  <path d="M324 174H455" class="arrow"/>
+  <text x="398" y="162" class="small" text-anchor="middle">1. AssumeRole</text>
+  <rect x="775" y="132" width="275" height="97" rx="10" class="box"/>
+  <text x="790" y="169" class="label">ProdReportReadRole</text>
+  <text x="790" y="197" class="detail">Trust + permissions policies</text>
+  <path d="M640 174H775" class="arrow"/>
+  <text x="707" y="162" class="small" text-anchor="middle">Target role</text>
+  <path d="M540 208V252H189V229" class="arrow"/>
+  <text x="362" y="274" class="small" text-anchor="middle">2. Temporary Prod role credentials</text>
+  <rect x="775" y="294" width="275" height="76" rx="10" class="box"/>
+  <svg x="791" y="312" width="40" height="40" viewBox="0 0 80 80">
+    <title>Icon-Architecture/64/Arch_Amazon-Simple-Storage-Service_64</title>
+    <g id="Icon-Architecture/64/Arch_Amazon-Simple-Storage-Service_64" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-Architecture-BG/64/Storage" fill="#7AA116">
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+        <g id="Icon-Service/64/Amazon-Simple-Storage-Service_64" transform="translate(12.999900, 11.999600)" fill="#FFFFFF">
+            <path d="M47.836,30.893 L48.22,28.189 C51.761,30.31 51.807,31.186 51.8060132,31.21 C51.8,31.215 51.196,31.719 47.836,30.893 L47.836,30.893 Z M45.893,30.353 C39.773,28.501 31.25,24.591 27.801,22.961 C27.801,22.947 27.805,22.934 27.805,22.92 C27.805,21.595 26.727,20.517 25.401,20.517 C24.077,20.517 22.999,21.595 22.999,22.92 C22.999,24.245 24.077,25.323 25.401,25.323 C25.983,25.323 26.511,25.106 26.928,24.761 C30.986,26.682 39.443,30.535 45.608,32.355 L43.17,49.561 C43.163,49.608 43.16,49.655 43.16,49.702 C43.16,51.217 36.453,54 25.494,54 C14.419,54 7.641,51.217 7.641,49.702 C7.641,49.656 7.638,49.611 7.632,49.566 L2.538,12.359 C6.947,15.394 16.43,17 25.5,17 C34.556,17 44.023,15.4 48.441,12.374 L45.893,30.353 Z M2,8.478 C2.072,7.162 9.634,2 25.5,2 C41.364,2 48.927,7.161 49,8.478 L49,8.927 C48.13,11.878 38.33,15 25.5,15 C12.648,15 2.843,11.868 2,8.913 L2,8.478 Z M51,8.5 C51,5.035 41.066,0 25.5,0 C9.934,0 0,5.035 0,8.5 L0.094,9.254 L5.642,49.778 C5.775,54.31 17.861,56 25.494,56 C34.966,56 45.029,53.822 45.159,49.781 L47.555,32.884 C48.888,33.203 49.985,33.366 50.866,33.366 C52.049,33.366 52.849,33.077 53.334,32.499 C53.732,32.025 53.884,31.451 53.77,30.84 C53.511,29.456 51.868,27.964 48.522,26.055 L50.898,9.293 L51,8.5 Z" id="Amazon-Simple-Storage-Service-Icon_64_Squid"></path>
+        </g>
+    </g>
+</svg>
+  <text x="838" y="325" class="label">Amazon S3</text>
+  <text x="838" y="349" class="detail">prod-reports-demo</text>
+  <path d="M131 229V331H775" class="arrow"/>
+  <text x="532" y="315" class="small" text-anchor="middle">3. GetObject with temporary Prod role credentials</text>
+  <path d="M455 174l-10 -5v10z M775 174l-10 -5v10z M189 229l-5 10h10z M775 331l-10 -5v10z" fill="#344966"/>
+</svg>
